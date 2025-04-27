@@ -50,6 +50,8 @@ RUN apt-get -y install apt-transport-https apt-utils \
                        libdwarf-dev libcairo2-dev libdbus-1-dev libegl1-mesa-dev libfreetype6-dev libfuse-dev \
                        libgl1-mesa-dev libglib2.0-dev libglu1-mesa-dev libpulse-dev libssl-dev libsvm-dev libsvm-java \
                        libtiff5-dev libudev-dev libxcursor-dev libxkbfile-dev libxml2-dev libxrandr-dev
+#install additonnal dependencies and librairies for the modular packer
+RUN pip install lief==0.16.2
 # install useful tools
 RUN apt-get update \
  && apt-get -y install colordiff colortail cython3 dos2unix dosbox git golang kmod less ltrace meson nasm tree strace \
